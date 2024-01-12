@@ -1,0 +1,48 @@
+{% extends 'food/base.html' %}
+
+{% block body %}
+
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-4 offset-md-4">
+            <div class="card">
+                <div class="card-header text-white bg-info">
+                    <div class="card-title">
+                        Add Item
+
+                    </div>
+                    <div class="card-body">
+                        <form method="POST">
+                            {% csrf_token %}
+                            <label>Itme Name: </label><br>
+                            {{ form.item_name }}
+                            <br><label>Itme Description: </label><br>
+                            {{ form.item_desc }}
+                            <br><label>Itme Prod Code: </label><br>
+                            {{ form.prod_code }}
+                            <br><label>Itme For User: </label><br>
+                            {{ form.for_user }}
+                            <br><label>Itme Price: </label><br>
+                            {{ form.item_price }}
+                            <br><label>Itme Image: </label><br>
+                            {{ form.item_image }}
+                            <button type="submit">Save</button>
+                        </form>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+
+
+{% endblock %}

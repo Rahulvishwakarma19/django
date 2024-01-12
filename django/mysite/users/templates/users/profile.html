@@ -1,0 +1,42 @@
+{% extends 'food/base.html' %}
+
+{% block body %}
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-4 offset-md-4">
+            <div class="card">
+                <div class="card-header text-white bg-info">
+                    <div class="card-title">
+                        Profile
+
+                    </div>
+                    <div class="card-body">
+                        <div class="card-body">
+                            <div class="row">
+                                <img src="{{ user.profile.image.url }}" style="border-radius: 50px;" width="100px" height="100px" >
+
+                            </div>
+                            <div class="offset-md-2">
+                                <span style="font-size: 1.5rem;">{{ user.first_name }}</span>
+                                <span style="font-size: 1.5rem;">{{ user.last_name }}</span>
+                                <h3 style="font-size: 1rem;">{{ user.email }}</h3>
+                                <h3 style="font-size: 1rem;">{{ user.profile.location }}</h3>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+{% endblock %}

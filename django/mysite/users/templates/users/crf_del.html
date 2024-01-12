@@ -1,0 +1,9 @@
+<form method="POST">
+    {% csrf_token %}
+    <p>Are you sure you want to delete</p>
+    {{ crfo_del.prod_code }}
+    {{ crfo_del.ratings }}
+    {{ crfo_del.feedback }}
+    {{ crfo_del.user_type }}
+    <button type="submit">Confirm</button>
+</form>

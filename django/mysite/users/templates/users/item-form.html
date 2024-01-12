@@ -1,0 +1,15 @@
+{{ pc }}
+
+<br>
+
+<form method="POST">
+    {% csrf_token %}
+
+    <label>Ratings: </label>
+    {{ form.ratings }}
+
+    <label>Feedback: </label>
+    {{ form.feedback}}
+
+    <button class="btn btn-success btn-sm">Save</button>
+</form>

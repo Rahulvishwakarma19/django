@@ -1,0 +1,8 @@
+{{ id }}
+{{ upd_order_id }}
+
+<form method="POST">
+    {% csrf_token %}
+    {{ form }}
+    <button type="submit">Confirm</button>
+</form>
